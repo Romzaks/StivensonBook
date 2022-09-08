@@ -1,3 +1,6 @@
+import math
+
+
 def ex1():
     print('Roman')
     print('Saint-Petersburg, Russia')
@@ -56,3 +59,37 @@ def ex8():
     count2 = int(input('Input second thing: '))
     sum_weight = count1 * weight1 + count2 * weight2
     print(sum_weight)
+
+
+def ex9():
+    p = 0.04
+    k = 1 + p
+    init_sum = float(input('Input your sum: '))
+    print(f'1 - {(init_sum * k):.2f}')
+    print(f'1 - {(init_sum * k**2):.2f}')
+    print(f'1 - {(init_sum * k**3):.2f}')
+
+
+def ex10():
+    a, b = int(input()), int(input())
+    print(a + b, abs(a - b), a * b, a // b, a % b, math.log10(a), a**b, sep='\n')
+
+
+def ex11():
+    liter = 0.22
+    km = 0.62
+    coef = 235
+    usa = float(input('Input in USA: '))
+    canada = usa * coef
+    print('Canada, ', canada)
+
+
+def ex12():
+    r = 6371.01
+    t1, g1 = math.radians(float(input())), math.radians(float(input()))
+    t2, g2 = math.radians(float(input())), math.radians(float(input()))
+    distance = r * math.acos(math.sin(t1) * math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1 - g2))
+    print(distance)
+
+
+
